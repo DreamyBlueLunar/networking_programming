@@ -9,8 +9,7 @@ int main(int argc, char** argv) {
     unsigned short port = atoi(argv[1]);
     int port_cnt = atoi(argv[2]);
     
-    moony::echo_server echo;
-    echo.run(port, port_cnt);
-
+    moony::echo_server::get_echo_server().run(port, port_cnt);
+    
     return 0;
 }
