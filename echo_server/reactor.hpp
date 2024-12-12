@@ -37,12 +37,16 @@ struct conn_item {
 
 class echo_server {
 public:
-    echo_server();
-    ~echo_server();
-
+    static echo_server& get_echo_server(void);
     const int run(const unsigned short& port, const int& cnt);
 
 private:
+    echo_server();
+    ~echo_server();
+
+    echo_server(const echo_server& obj) = delete;
+    const echo_server& operator=(echo_server& obj) = delete;
+
     const int init_server(const unsigned short& port);
     const int set_event(const int& fd, const int& op, const int& event);
     friend const int accept_cb(echo_server& server, const int& fd);

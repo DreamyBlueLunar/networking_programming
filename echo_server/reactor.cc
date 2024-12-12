@@ -1,5 +1,10 @@
 #include "reactor.hpp"
 
+moony::echo_server& moony::echo_server::get_echo_server(void) {
+    static echo_server server;
+    return server;
+}
+
 moony::echo_server::echo_server() {
     conn_list_.resize(CONN_LEN);
     epfd_ = epoll_create(1);
