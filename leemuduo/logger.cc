@@ -11,7 +11,7 @@ void lee::logger::set_log_level(int log_level) {
 }
 
 // 日志格式：[INFO] time: msg
-void lee::logger::log(std::string& msg) {
+void lee::logger::log(const std::string& msg) {
     switch (log_level_) {
         case INFO:
             std::cout << "[INFO]";
