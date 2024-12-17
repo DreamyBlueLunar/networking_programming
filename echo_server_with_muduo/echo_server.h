@@ -1,7 +1,7 @@
 #pragma once
 
 #include <muduo/base/Logging.h>
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
 #include <muduo/net/EventLoop.h>
 #include <muduo/net/TcpServer.h>
 #include <functional>

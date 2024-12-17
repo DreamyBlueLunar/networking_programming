@@ -5,15 +5,15 @@ echo_server::echo_server(muduo::net::EventLoop *loop,
         const std::string &nameArg):
             server_(loop, listenAddr, nameArg), loop_(loop) {
     // 设置用户连接事件的回调
-    server_.setConnectionCallback(std::bind(&echo_server::on_connection, 
+    server_.setConnectionCallback(boost::bind(&echo_server::on_connection, 
                                             this, 
-                                            std::placeholders::_1));
+                                            boost::placeholders::_1));
     // 设置用户读写事件的回调
-    server_.setMessageCallback(std::bind(&echo_server::on_message, 
+    server_.setMessageCallback(boost::bind(&echo_server::on_message, 
                                         this, 
-                                        std::placeholders::_1, 
-                                        std::placeholders::_2, 
-                                        std::placeholders::_3));
+                                        boost::placeholders::_1, 
+                                        boost::placeholders::_2, 
+                                        boost::placeholders::_3));
     // 设置线程池中线程的数量
     // 1 * I/O线程 + 3 * 工作线程
     server_.setThreadNum(4);
