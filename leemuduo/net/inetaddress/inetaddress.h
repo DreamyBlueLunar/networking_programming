@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../copyable.h"
+#include "../../base/copyable.h"
 
 #include <netinet/in.h>
 #include <arpa/inet.h>
@@ -23,6 +23,4 @@ public:
 private:
     sockaddr_in addr_;
 };
-
-
 }
