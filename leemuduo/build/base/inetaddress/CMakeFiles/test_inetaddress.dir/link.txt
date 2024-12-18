@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/test_inetaddress.dir/test/test_inetaddress.cc.o CMakeFiles/test_inetaddress.dir/inetaddress.cc.o -o ../../../tests/test_inetaddress  -lgtest -lgtest_main -lpthread 
