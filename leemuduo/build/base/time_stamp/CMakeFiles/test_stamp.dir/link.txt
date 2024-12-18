@@ -1,1 +1,0 @@
-/usr/bin/c++ -rdynamic CMakeFiles/test_stamp.dir/test/test_stamp.cc.o CMakeFiles/test_stamp.dir/time_stamp.cc.o -o ../../../tests/test_stamp  -lgtest -lgtest_main -lpthread 
