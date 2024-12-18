@@ -3,8 +3,8 @@
 #include <sstream>
 #include <string>
 
-#include "noncopyable.h"
-#include "time_stamp.h"
+#include "../noncopyable.h"
+#include "../time_stamp/time_stamp.h"
 
 #define MUDEBUG
 #define LOG_BUF_LEN 1024
