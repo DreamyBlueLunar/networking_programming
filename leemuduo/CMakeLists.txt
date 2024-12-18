@@ -27,3 +27,4 @@ add_library(leemuduo SHARED ${SRC_LIST})
 
 add_subdirectory(base/logger)
 add_subdirectory(base/time_stamp)
+add_subdirectory(base/inetaddress)
