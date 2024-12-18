@@ -19,7 +19,7 @@ std::string lee::time_stamp::to_string() const {
                 tm->tm_year + 1900,
                 tm->tm_mon + 1, 
                 tm->tm_mday, 
-                tm->tm_hour + 8, // 我不知道他这个算的是哪个时区
+                tm->tm_hour + 8, // 我不知道他这个算的是哪个时区，+8就是北京时间
                 tm->tm_min, 
                 tm->tm_sec);
 
