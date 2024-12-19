@@ -54,7 +54,7 @@ void lee::channel::handle_event(time_stamp receieve_time) {
  * 根据事件的类型调用对应的回调
  */
 void lee::channel::handle_event_with_guard(time_stamp receive_time) {
-    LOG_INFO << "channel handle event revents_: " << revents_ << ENDL;    
+    LOG_FMT_INFO("channel handle event revents_: %d\n", revents_);    
 
     if ((revents_ & EPOLLHUP) && !(revents_ & EPOLLIN)) {
         if (close_callback_) {

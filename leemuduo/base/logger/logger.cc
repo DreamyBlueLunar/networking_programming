@@ -1,9 +1,6 @@
 #include "logger.h"
+
 #include <iostream>
-
-lee::logger_stream::logger_stream() {}
-
-lee::logger_stream::~logger_stream() {}
 
 lee::logger& lee::logger::get_instance(void) {
     static lee::logger obj;
@@ -34,28 +31,4 @@ void lee::logger::log(const std::string& msg) {
     }
 
     std::cout << lee::time_stamp::now().to_string() << ": " << msg;
-}
-
-lee::logger_stream& lee::logger::log_stream(int log_level, const std::string& time) {
-    set_log_level(log_level);
-    switch (log_level_) {
-        case INFO:
-            loggerstream_ << "[INFO] ";
-            break;
-        case ERROR:
-            loggerstream_ << "[ERROR] ";
-            break;
-        case FATAL:
-            loggerstream_ << "[FATAL] ";
-            break;
-        case DEBUG:
-            loggerstream_ << "[DEBUG] ";
-            break;
-        default:
-            break;
-    }
-
-    loggerstream_ << time << ": ";
-
-    return loggerstream_;
 }
